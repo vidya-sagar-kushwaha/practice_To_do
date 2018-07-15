@@ -12,7 +12,7 @@ $conn = new Connection();
 $db = $conn->get_connection();
 
 // set this from the input from user(API), read a list or all lists, NULL->all tasks order by listID
-$given_list_id = 2;
+$given_list_id = null;
 $given_task_id = 1;
 
 // initialize object
