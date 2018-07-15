@@ -1,6 +1,6 @@
 <?php
 
-class To_Do_LIst{
+class To_Do_List{
 
     private $db;
     private $list_table = "to_do_lists";
@@ -10,7 +10,7 @@ class To_Do_LIst{
     // fields in 'to_do_lists' table
     public $list_id;
     public $name;
-    public $created_on;
+    public $updated_on;
     public $pending_tasks;
 
     public function __construct($db)
@@ -19,27 +19,32 @@ class To_Do_LIst{
         $this->db = $db;
     }
 
-    function read($list_id, $task_id){
-        //if(isset($list_id)) echo "-------------------";
-        if($list_id!=null) {
-            if($task_id !=null)
-                $sql = "select task_id, name, created_on, status from " . $this->task_table . " where list_id=" . $list_id . " and task_id=".$task_id.";";
-            else
-                $sql = "select task_id, name, created_on, status from " . $this->task_table . " where list_id=" . $list_id .";";
-
-        }else
-            $sql = "select * from ".$this->task_table."  order by list_id ;";
+    function read(){
+        $sql = "select * from ".$this->list_table."  order by list_id ;";
         $result = $this->db->query($sql);
         return $result;
     }
 
-    function create_list($name){
-        $sql = "insert into ".$this->list_table."(name) values(\"".$name."\");";
+    function read_one(){
+        $sql = "select * from ".$this->list_table." where list_id = ".$this->list_id;
+        $result = $this->db->query($sql);
+        $row = $result->fetch_assoc();
+
+        // set values to object properties
+
+        $this->list_id = $row['list_id'];
+        $this->name = $row['name'];
+        $this->updated_on = $row['updated_on'];
+        $this->pending_tasks = $row['pending_tasks'];
+    }
+
+    function create_list(){
+        $sql = "insert into ".$this->list_table."(name) values(\"".$this->name."\");";
         $result = $this->db->query($sql);
         if($result){
-            echo "successfully added a new list <br>";
+            return true;
         }else
-            echo "Failed to add a new list..:((";
+            return false;
     }
 
     function create_task($list_id, $task_name, $status){
@@ -57,18 +62,18 @@ class To_Do_LIst{
 
 
     function update_list($list_id, $new_name){
-        $sql = "update ".$this->list_table." set name = ".$new_name." where list_id = ".$list_id;
+        $sql = "update ".$this->list_table." set name = \"".$new_name."\", created_on = Now() where list_id = ".$list_id;
         echo "<br> ".$sql;
         $result = $this->db->query($sql);
         if($result){
             echo "<br>successfully updated the list details <br>";
         }else
-            echo "<br>Failed to delete the list details..:((";
+            echo "<br>Failed to update the list details..:((";
     }
 
 
     function update_task($list_id, $task_id, $new_name, $new_status){
-        $sql = "update ".$this->task_table." set name = \"".$new_name."\", status = \"".$new_status."\" where list_id = ".$list_id." and task_id = ".$task_id;
+        $sql = "update ".$this->task_table." set name = \"".$new_name."\", status = \"".$new_status."\", created_on = Now() where list_id = ".$list_id." and task_id = ".$task_id;
         $result = $this->db->query($sql);
         if($result){
             echo "<br>successfully updated the task details <br>";

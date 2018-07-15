@@ -9,7 +9,7 @@ header("Content-Type: application/json; charset=UTF-8");
 
 // include database and object files
 include_once '../config/connection.php';
-include_once '../classes/To_Do_LIst.php';
+include_once '../classes/To_Do_List.php';
 
 // instantiate connection and to_do_lists object
 $conn = new Connection();
@@ -20,7 +20,7 @@ $given_list_id =4;
 $given_task_id = null;
 
 // initialize object
-$to_do_lists = new To_Do_LIst($db);
+$to_do_lists = new To_Do_List($db);
 
 // delete
 if($given_task_id==null)

@@ -1,7 +1,6 @@
 <?php
 /*
  * Create a new list: Here user can create a new do_do_list, so need not give the list id
- * create a task in an existing list : give list_id + task details to insert
  *
  * */
 header("Access-Control-Allow-Origin: *");
@@ -19,23 +18,21 @@ include_once '../classes/To_Do_List.php';
 $conn = new Connection();
 $db = $conn->get_connection();
 
-
 // get posted data
 $data = json_decode(file_get_contents("php://input"));
 
+$list = new To_Do_List($db);
 
-// set this from the input from user(API), if list_id is NULL--> we create a new list..else a new task under that list_ID
-$given_list_id = 9;
-$given_list_name = "hello";
-$given_task_name = "C++";
-$given_task_status = "in progress";
+$list->name = $data->name;
 
-// initialize object
-$to_do_lists = new To_Do_List($db);
-
-// query products
-if($given_list_id==null)
-    $stmt = $to_do_lists->create_list($given_list_name);
-else
-    $stmt = $to_do_lists->create_task($given_list_id, $given_task_name, $given_task_status);
+if($list->create_list()) {
+    echo '{';
+    echo '"message": "List was created."';
+    echo '}';
+}
+else{
+    echo '{';
+    echo '"message": "Unable to create List."';
+    echo '}';
+}
 
