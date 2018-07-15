@@ -11,15 +11,18 @@ include_once '../classes/To_Do_LIst.php';
 $conn = new Connection();
 $db = $conn->get_connection();
 
+// set this from the input from user(API), read a list or all lists, NULL->all tasks order by listID
+$list = null;
+
 // initialize object
 $to_do_lists = new To_Do_LIst($db);
 
 // query products
-$stmt = $to_do_lists->read();
+$stmt = $to_do_lists->read($list);
 $num = $stmt->num_rows;
 
 
-echo "Rows in READ.PHP : ".$num;
+echo "Rows in READ.PHP : ".$num."<br>";
 
 // check if more than 0 record found
 if($num>0){
@@ -37,13 +40,24 @@ if($num>0){
         // this will make $row['name'] to
         // just $name only
         extract($row);
+        if(!isset($list)) {
+            // no particular list mentioned..so display all tasks group by ListID
+            $to_do_lists_item = array(
+                "task_id" => $task_id,
+                "list_id" => $list_id,
+                "name" => $name,
+                "created_on" => $created_on,
+                "status" => $status
+            );
+        }else{
+            $to_do_lists_item = array(
+                "task_id" => $task_id,
+                "name" => $name,
+                "created_on" => $created_on,
+                "status" => $status
+            );
 
-        $to_do_lists_item=array(
-            "list_id" => $list_id,
-            "name" => $name,
-            "created_on" => $created_on,
-            "pending_tasks" => $pending_tasks
-        );
+        }
 
         array_push($to_do_lists_arr["records"], $to_do_lists_item);
     }

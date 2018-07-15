@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82225fae-5a82-4ff1-bd25-b730afdceaaa" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/CRUD/read.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/To_Do_LIst.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRUD/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/read.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/To_Do_LIst.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/To_Do_LIst.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,26 +18,26 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+            <state relative-caret-position="120">
+              <caret line="8" column="18" selection-start-line="8" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="To_Do_LIst.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="To_Do_LIst.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/To_Do_LIst.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="390">
+              <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="read.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="read.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CRUD/read.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="32" column="83" selection-start-line="32" selection-start-column="83" selection-end-line="32" selection-end-column="83" />
+            <state relative-caret-position="158">
+              <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -59,8 +60,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/connection.php" />
-        <option value="$PROJECT_DIR$/classes/To_Do_LIst.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/classes/To_Do_LIst.php" />
         <option value="$PROJECT_DIR$/CRUD/read.php" />
       </list>
     </option>
@@ -74,7 +75,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="823" />
@@ -101,6 +102,11 @@
               <item name="practice_To_do" type="b2602c69:ProjectViewProjectNode" />
               <item name="practice_To_do" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice_To_do" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice_To_do" type="462c0819:PsiDirectoryNode" />
+              <item name="CRUD" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="practice_To_do" type="b2602c69:ProjectViewProjectNode" />
@@ -141,15 +147,15 @@
       <updated>1531578026676</updated>
       <workItem from="1531578028159" duration="4023000" />
       <workItem from="1531593770553" duration="237000" />
-      <workItem from="1531594012992" duration="2203000" />
+      <workItem from="1531594012992" duration="5101000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6463000" />
+    <option name="totallyTimeSpent" value="9361000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="823" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="821" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
@@ -195,13 +201,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/connection.php" />
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/connection.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -209,17 +208,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/To_Do_LIst.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="120">
+          <caret line="8" column="18" selection-start-line="8" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CRUD/read.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="32" column="83" selection-start-line="32" selection-start-column="83" selection-end-line="32" selection-end-column="83" />
+        <state relative-caret-position="158">
+          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/To_Do_LIst.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
         </state>
       </provider>
     </entry>
