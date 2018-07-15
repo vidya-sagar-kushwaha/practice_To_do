@@ -23,22 +23,27 @@ $task = new Tasks($db);
 $task->list_id = isset($_GET['list_id']) ? $_GET['list_id'] : -1;
 $task->task_id = isset($_GET['task_id']) ? $_GET['task_id'] : -1;
 
-
 // query task
 if($task->list_id>=0 && $task->task_id>=0) {
     // list_id and task_id given.
-    $stmt = $task->read_one();
-    // create array
-    $task_arr = array(
-        "task_id" =>  $task->task_id,
-        "list_id" =>  $task->list_id,
-        "name" => $task->name,
-        "updated_on" => $task->updated_on,
-        "status" => $task->status
-    );
+    $flag = $task->read_one();
 
-    // make it json format
-    print_r(json_encode($task_arr));
+    if($flag) {
+        // create array
+        $task_arr = array(
+            "task_id" => $task->task_id,
+            "list_id" => $task->list_id,
+            "name" => $task->name,
+            "updated_on" => $task->updated_on,
+            "status" => $task->status
+        );
+
+        print_r(json_encode($task_arr));
+    }else {
+        echo json_encode(
+            array("message" => "No Task found.")
+        );
+    }
 }else {
     // Show all tasks, order by list_id
     $stmt = $task->read();

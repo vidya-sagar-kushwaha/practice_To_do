@@ -34,6 +34,8 @@ class Tasks{
         $this->name = $row['name'];
         $this->updated_on = $row['updated_on'];
         $this->status = $row['status'];
+        if($result->num_rows>0) return true;
+        else return false;
     }
 
     function create(){
