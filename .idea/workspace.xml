@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82225fae-5a82-4ff1-bd25-b730afdceaaa" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/CRUD/create_task.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CRUD/delete_task.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CRUD/task_read_one.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CRUD/update_task.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/Tasks.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRUD/create.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CRUD/create_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/create_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/delete_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/read.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/update_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/To_Do_List.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/To_Do_List.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRUD/create_task.php" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/create_task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRUD/delete_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/delete_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRUD/delete_task.php" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/delete_task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRUD/list_read_one.php" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/list_read_one.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRUD/task_read_one.php" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/task_read_one.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRUD/update_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/update_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRUD/update_task.php" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/update_task.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,46 +40,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update_task.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CRUD/update_task.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="78" lean-forward="true" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="task_read_one.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CRUD/task_read_one.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="49" column="30" lean-forward="true" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+            <state relative-caret-position="624">
+              <caret line="73" column="1" lean-forward="true" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="read_one.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CRUD/read_one.php">
+      <file leaf-file-name="update_list.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CRUD/update_list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="285">
+              <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="read.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CRUD/read.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="delete_task.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CRUD/delete_task.php">
+      <file leaf-file-name="update_task.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CRUD/update_task.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
-              <folding>
-                <element signature="e#6#32#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="339">
+              <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -88,7 +70,7 @@
       <file leaf-file-name="Tasks.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/Tasks.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
+            <state relative-caret-position="102">
               <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
             </state>
           </provider>
@@ -110,16 +92,17 @@
         <option value="$PROJECT_DIR$/CRUD/create.php" />
         <option value="$PROJECT_DIR$/classes/To_Do_LIst.php" />
         <option value="$PROJECT_DIR$/CRUD/read_one.php" />
-        <option value="$PROJECT_DIR$/CRUD/task_read_one.php" />
-        <option value="$PROJECT_DIR$/CRUD/create_task.php" />
-        <option value="$PROJECT_DIR$/CRUD/create_list.php" />
-        <option value="$PROJECT_DIR$/CRUD/update_list.php" />
-        <option value="$PROJECT_DIR$/CRUD/update_task.php" />
-        <option value="$PROJECT_DIR$/CRUD/delete_list.php" />
-        <option value="$PROJECT_DIR$/CRUD/delete_task.php" />
         <option value="$PROJECT_DIR$/classes/Tasks.php" />
         <option value="$PROJECT_DIR$/classes/To_Do_List.php" />
         <option value="$PROJECT_DIR$/CRUD/read.php" />
+        <option value="$PROJECT_DIR$/CRUD/create_list.php" />
+        <option value="$PROJECT_DIR$/CRUD/create_task.php" />
+        <option value="$PROJECT_DIR$/CRUD/delete_list.php" />
+        <option value="$PROJECT_DIR$/CRUD/delete_task.php" />
+        <option value="$PROJECT_DIR$/CRUD/list_read_one.php" />
+        <option value="$PROJECT_DIR$/CRUD/task_read_one.php" />
+        <option value="$PROJECT_DIR$/CRUD/update_list.php" />
+        <option value="$PROJECT_DIR$/CRUD/update_task.php" />
       </list>
     </option>
   </component>
@@ -204,12 +187,12 @@
       <updated>1531578026676</updated>
       <workItem from="1531578028159" duration="4023000" />
       <workItem from="1531593770553" duration="237000" />
-      <workItem from="1531594012992" duration="24559000" />
+      <workItem from="1531594012992" duration="25512000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28819000" />
+    <option name="totallyTimeSpent" value="29772000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="821" extended-state="6" />
@@ -300,45 +283,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CRUD/read.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/CRUD/create.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" lean-forward="true" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CRUD/create_task.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        <state relative-caret-position="225">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CRUD/create_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="105">
+          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRUD/create_task.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRUD/delete_task.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+          <folding>
+            <element signature="e#6#32#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CRUD/delete_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="40" selection-end-line="38" selection-end-column="1" />
+        <state relative-caret-position="360">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding>
+            <element signature="e#6#32#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CRUD/update_list.php">
+    <entry file="file://$PROJECT_DIR$/CRUD/list_read_one.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="13" column="41" lean-forward="true" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/Tasks.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
@@ -349,39 +341,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CRUD/delete_task.php">
+    <entry file="file://$PROJECT_DIR$/classes/Tasks.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
-          <folding>
-            <element signature="e#6#32#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CRUD/update_task.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="78" lean-forward="true" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
+        <state relative-caret-position="102">
+          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CRUD/task_read_one.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="49" column="30" lean-forward="true" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+        <state relative-caret-position="624">
+          <caret line="73" column="1" lean-forward="true" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CRUD/read_one.php">
+    <entry file="file://$PROJECT_DIR$/CRUD/update_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="285">
+          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-end-line="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CRUD/read.php">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/CRUD/update_task.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

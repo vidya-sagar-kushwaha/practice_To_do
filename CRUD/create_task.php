@@ -23,6 +23,7 @@ $data = json_decode(file_get_contents("php://input"));
 
 $task = new Tasks($db);
 
+//populate the object
 $task->list_id = $data->list_id;
 $task->name = $data->name;
 $task->status = $data->status;

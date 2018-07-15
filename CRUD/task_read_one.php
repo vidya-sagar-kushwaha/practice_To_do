@@ -1,4 +1,8 @@
 <?php
+
+/*
+ * Read a task
+ * */
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: access");
 header("Access-Control-Allow-Methods: GET");
@@ -15,13 +19,14 @@ $db = $conn->get_connection();
 
 $task = new Tasks($db);
 
-// set ID property of product to be edited
+// set task id to be read. -1 indicates that value has not been supplied
 $task->list_id = isset($_GET['list_id']) ? $_GET['list_id'] : -1;
 $task->task_id = isset($_GET['task_id']) ? $_GET['task_id'] : -1;
 
 
-// query products
+// query task
 if($task->list_id>=0 && $task->task_id>=0) {
+    // list_id and task_id given.
     $stmt = $task->read_one();
     // create array
     $task_arr = array(
@@ -35,6 +40,7 @@ if($task->list_id>=0 && $task->task_id>=0) {
     // make it json format
     print_r(json_encode($task_arr));
 }else {
+    // Show all tasks, order by list_id
     $stmt = $task->read();
     $num = $stmt->num_rows;
     // check if more than 0 record found

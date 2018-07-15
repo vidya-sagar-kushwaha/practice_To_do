@@ -1,6 +1,6 @@
 <?php
 /*
- * update a list
+ * update task details
  *
  * */
 header("Access-Control-Allow-Origin: *");
@@ -26,7 +26,7 @@ $data = json_decode(file_get_contents("php://input"));
 $task->list_id = $data->list_id;
 $task->task_id = $data->task_id;
 
-// set list property values
+// set task property values
 $task->name = $data->name;
 $task->status = $data->status;
 

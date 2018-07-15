@@ -1,4 +1,9 @@
 <?php
+/*
+ * Read the list details, if list_id is supplied
+ * Else, read all the list details, order by list_id
+ *
+ * */
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: access");
 header("Access-Control-Allow-Methods: GET");
@@ -15,10 +20,10 @@ $db = $conn->get_connection();
 
 $list = new To_Do_List($db);
 
-// set ID property of product to be edited
+// set ID property of list to be read. -1 indicates that list_id not supplied
 $list->list_id = isset($_GET['list_id']) ? $_GET['list_id'] : -1;
 
-// query products
+// query list
 if($list->list_id>=0) {
     $stmt = $list->read_one();
     // create array
@@ -32,7 +37,7 @@ if($list->list_id>=0) {
     // make it json format
     print_r(json_encode($list_arr));
 }else {
-
+    // read all the lists
     $stmt = $list->read();
     $num = $stmt->num_rows;
     // check if more than 0 record found

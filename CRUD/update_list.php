@@ -1,6 +1,6 @@
 <?php
 /*
- * update a list
+ * update a list details
  *
  * */
 header("Access-Control-Allow-Origin: *");

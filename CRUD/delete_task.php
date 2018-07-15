@@ -18,11 +18,10 @@ include_once '../classes/Tasks.php';
 $conn = new Connection();
 $db = $conn->get_connection();
 
-$task = new Tasks($db);
-
 // get task id
 $data = json_decode(file_get_contents("php://input"));
 
+$task = new Tasks($db);
 // set task id to be deleted
 $task->list_id = $data->list_id;
 $task->task_id = $data->task_id;

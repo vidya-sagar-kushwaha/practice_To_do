@@ -18,11 +18,10 @@ include_once '../classes/To_Do_List.php';
 $conn = new Connection();
 $db = $conn->get_connection();
 
-$list = new To_Do_List($db);
-
 // get list id
 $data = json_decode(file_get_contents("php://input"));
 
+$list = new To_Do_List($db);
 // set list id to be deleted
 $list->list_id = $data->list_id;
 

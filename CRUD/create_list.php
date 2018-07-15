@@ -1,6 +1,6 @@
 <?php
 /*
- * Create a new list: Here user can create a new do_do_list, so need not give the list id
+ * Create a new list
  *
  * */
 header("Access-Control-Allow-Origin: *");
@@ -21,8 +21,8 @@ $db = $conn->get_connection();
 // get posted data
 $data = json_decode(file_get_contents("php://input"));
 
+//create and populate the object. It will be used in sql query
 $list = new To_Do_List($db);
-
 $list->name = $data->name;
 
 if($list->create()) {
