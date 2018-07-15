@@ -1,6 +1,6 @@
 <?php
 
-class To_Do_List{
+class Tasks{
 
     private $db;
     private $list_table = "to_do_lists";
@@ -8,48 +8,47 @@ class To_Do_List{
 
 
     // fields in 'to_do_lists' table
+    public $task_id;
     public $list_id;
     public $name;
     public $updated_on;
-    public $pending_tasks;
+    public $status;
 
     public function __construct($db)
     {
-
         $this->db = $db;
     }
 
     function read(){
-        $sql = "select * from ".$this->list_table."  order by list_id ;";
+        $sql = "select * from ".$this->task_table." order by list_id ;";
         $result = $this->db->query($sql);
         return $result;
     }
 
     function read_one(){
-        $sql = "select * from ".$this->list_table." where list_id = ".$this->list_id;
+        $sql = "select * from ".$this->task_table." where list_id = ".$this->list_id." and task_id = ".$this->task_id;
         $result = $this->db->query($sql);
         $row = $result->fetch_assoc();
 
         // set values to object properties
-
-        $this->list_id = $row['list_id'];
         $this->name = $row['name'];
         $this->updated_on = $row['updated_on'];
-        $this->pending_tasks = $row['pending_tasks'];
+        $this->status = $row['status'];
     }
 
     function create(){
-        $sql = "insert into ".$this->list_table."(name) values(\"".$this->name."\");";
+        $sql = "insert into ".$this->task_table."(list_id, name, status) values(".$this->list_id.",\"".$this->name."\",\"".$this->status."\");";
         $result = $this->db->query($sql);
         if($result){
+            $sql = "update ".$this->list_table." set pending_tasks = pending_tasks + 1 where list_id = ".$this->list_id;
+            $this->db->query($sql);
             return true;
         }else
             return false;
     }
 
     function update(){
-        $sql = "update ".$this->list_table." set name = \"".$this->name."\", updated_on = Now() where list_id = ".$this->list_id;
-        echo $sql;
+        $sql = "update ".$this->task_table." set name = \"".$this->name."\", status = \"".$this->status."\", updated_on = Now() where list_id = ".$this->list_id." and task_id = ".$this->task_id;
         $result = $this->db->query($sql);
         if($result){
             return true;
@@ -58,9 +57,11 @@ class To_Do_List{
     }
 
     function delete(){
-        $sql = "delete from ".$this->list_table." where list_id=".$this->list_id;
+        $sql = "delete from ".$this->task_table." where list_id=".$this->list_id." and task_id=".$this->task_id.";";
         $result = $this->db->query($sql);
         if($result){
+            $sql = "update ".$this->list_table." set pending_tasks = pending_tasks - 1 where list_id = ".$this->list_id." and pending_tasks > 0";
+            $this->db->query($sql);
             return true;
         }else
             return false;

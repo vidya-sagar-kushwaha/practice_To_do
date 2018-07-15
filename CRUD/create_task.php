@@ -1,6 +1,6 @@
 <?php
 /*
- * Create a new list: Here user can create a new do_do_list, so need not give the list id
+ * Create a new task
  *
  * */
 header("Access-Control-Allow-Origin: *");
@@ -12,27 +12,29 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 // include database and object files
 include_once '../config/connection.php';
-include_once '../classes/To_Do_List.php';
+include_once '../classes/Tasks.php';
 
-// instantiate connection and to_do_lists object
+// instantiate connection and Task object
 $conn = new Connection();
 $db = $conn->get_connection();
 
 // get posted data
 $data = json_decode(file_get_contents("php://input"));
 
-$list = new To_Do_List($db);
+$task = new Tasks($db);
 
-$list->name = $data->name;
+$task->list_id = $data->list_id;
+$task->name = $data->name;
+$task->status = $data->status;
 
-if($list->create()) {
+if($task->create()) {
     echo '{';
-    echo '"message": "List was created."';
+    echo '"message": "Task was created."';
     echo '}';
 }
 else{
     echo '{';
-    echo '"message": "Unable to create List."';
+    echo '"message": "Unable to create Task."';
     echo '}';
 }
 

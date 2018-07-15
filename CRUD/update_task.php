@@ -1,6 +1,6 @@
 <?php
 /*
- * Create a new list: Here user can create a new do_do_list, so need not give the list id
+ * update a list
  *
  * */
 header("Access-Control-Allow-Origin: *");
@@ -9,30 +9,35 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-
 // include database and object files
 include_once '../config/connection.php';
-include_once '../classes/To_Do_List.php';
+include_once '../classes/Tasks.php';
 
-// instantiate connection and to_do_lists object
+// instantiate connection and Task object
 $conn = new Connection();
 $db = $conn->get_connection();
 
-// get posted data
+$task = new Tasks($db);
+
+// get id of product to be edited
 $data = json_decode(file_get_contents("php://input"));
 
-$list = new To_Do_List($db);
+// set ID property of list to be edited
+$task->list_id = $data->list_id;
+$task->task_id = $data->task_id;
 
-$list->name = $data->name;
+// set list property values
+$task->name = $data->name;
+$task->status = $data->status;
 
-if($list->create()) {
+// update the task
+if($task->update()){
     echo '{';
-    echo '"message": "List was created."';
+    echo '"message": "Task was updated."';
     echo '}';
 }
 else{
     echo '{';
-    echo '"message": "Unable to create List."';
+    echo '"message": "Unable to update Task."';
     echo '}';
 }
-
