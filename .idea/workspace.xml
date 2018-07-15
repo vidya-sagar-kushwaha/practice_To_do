@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82225fae-5a82-4ff1-bd25-b730afdceaaa" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CRUD/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/read.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/To_Do_LIst.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/To_Do_LIst.php" afterDir="false" />
     </list>
@@ -24,20 +23,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="To_Do_LIst.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="To_Do_LIst.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/To_Do_LIst.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+            <state relative-caret-position="315">
+              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="read.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="read.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CRUD/read.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+            <state relative-caret-position="780">
+              <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -147,18 +146,18 @@
       <updated>1531578026676</updated>
       <workItem from="1531578028159" duration="4023000" />
       <workItem from="1531593770553" duration="237000" />
-      <workItem from="1531594012992" duration="5101000" />
+      <workItem from="1531594012992" duration="5804000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9361000" />
+    <option name="totallyTimeSpent" value="10064000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="821" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13194445" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -215,17 +214,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CRUD/read.php">
+    <entry file="file://$PROJECT_DIR$/classes/To_Do_LIst.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        <state relative-caret-position="315">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/To_Do_LIst.php">
+    <entry file="file://$PROJECT_DIR$/CRUD/read.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+        <state relative-caret-position="780">
+          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
         </state>
       </provider>
     </entry>

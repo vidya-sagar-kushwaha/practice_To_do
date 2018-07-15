@@ -12,13 +12,14 @@ $conn = new Connection();
 $db = $conn->get_connection();
 
 // set this from the input from user(API), read a list or all lists, NULL->all tasks order by listID
-$list = null;
+$given_list_id = 2;
+$given_task_id = 1;
 
 // initialize object
 $to_do_lists = new To_Do_LIst($db);
 
 // query products
-$stmt = $to_do_lists->read($list);
+$stmt = $to_do_lists->read($given_list_id, $given_task_id);
 $num = $stmt->num_rows;
 
 
@@ -27,20 +28,18 @@ echo "Rows in READ.PHP : ".$num."<br>";
 // check if more than 0 record found
 if($num>0){
 
-    // products array
+    // To_Do array
     $to_do_lists_arr=array();
     $to_do_lists_arr["records"]=array();
 
     // retrieve our table contents
-    // fetch() is faster than fetchAll()
-    // http://stackoverflow.com/questions/2770630/pdofetchall-vs-pdofetch-in-a-loop
 
     while ($row = $stmt->fetch_assoc()){
         // extract row
         // this will make $row['name'] to
         // just $name only
         extract($row);
-        if(!isset($list)) {
+        if($given_list_id==null) {
             // no particular list mentioned..so display all tasks group by ListID
             $to_do_lists_item = array(
                 "task_id" => $task_id,

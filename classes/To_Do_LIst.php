@@ -19,11 +19,15 @@ class To_Do_LIst{
         $this->db = $db;
     }
 
-    function read($list_id){
+    function read($list_id, $task_id){
         //if(isset($list_id)) echo "-------------------";
-        if($list_id!=null)
-            $sql = "select task_id, name, created_on, status from ".$this->task_table." where list_id=".$list_id.";";
-        else
+        if($list_id!=null) {
+            if($task_id !=null)
+                $sql = "select task_id, name, created_on, status from " . $this->task_table . " where list_id=" . $list_id . " and task_id=".$task_id.";";
+            else
+                $sql = "select task_id, name, created_on, status from " . $this->task_table . " where list_id=" . $list_id .";";
+
+        }else
             $sql = "select * from ".$this->task_table."  order by list_id ;";
         $result = $this->db->query($sql);
         return $result;
