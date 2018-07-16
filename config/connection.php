@@ -5,7 +5,8 @@ class Connection
     public function get_connection()
     {
         if ($this->db == null) {
-            $this->db = new mysqli('127.0.0.1:8889', 'root', 'root', 'To_Do');
+            // This is MultiUser branch
+            $this->db = new mysqli('127.0.0.1:8889', 'root', 'root', 'To_Do_with_users');
             if ($this->db->connect_errno) {
                 die('dying....!!');
             }
