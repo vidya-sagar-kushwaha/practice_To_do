@@ -49,8 +49,6 @@ if($list->list_id>=0) {
     if($num>0){
         // To_Do array
         $list_arr=array();
-        $list_arr["records"]=array();
-
         // retrieve our table contents\
         while ($row = $stmt->fetch_assoc()){
             // extract rows...this will make $row['name'] to $name only
@@ -61,7 +59,7 @@ if($list->list_id>=0) {
                 "updated_on" => $updated_on,
                 "pending_tasks" => $pending_tasks
             );
-            array_push($list_arr["records"], $list_item);
+            array_push($list_arr, $list_item);
         }
         print_r(json_encode($list_arr));
     }
