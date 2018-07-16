@@ -57,9 +57,6 @@ user_id integer,
   FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
 )
 
-insert into users(name) values("Vidya");
-insert into users(name) values("Reshma");
-insert into users(name) values("Mohit");
  * */
 
 
