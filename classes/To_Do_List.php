@@ -36,6 +36,9 @@ class To_Do_List{
         $this->name = $row['name'];
         $this->updated_on = $row['updated_on'];
         $this->pending_tasks = $row['pending_tasks'];
+
+        if($result->num_rows > 0) return true;
+        else return false;
     }
 
     function create(){

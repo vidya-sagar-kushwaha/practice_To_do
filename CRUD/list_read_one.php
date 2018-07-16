@@ -25,17 +25,22 @@ $list->list_id = isset($_GET['list_id']) ? $_GET['list_id'] : -1;
 
 // query list
 if($list->list_id>=0) {
-    $stmt = $list->read_one();
-    // create array
-    $list_arr = array(
-        "list_id" =>  $list->list_id,
-        "name" => $list->name,
-        "updated_on" => $list->updated_on,
-        "pending_tasks" => $list->pending_tasks
-    );
-
-    // make it json format
-    print_r(json_encode($list_arr));
+    $flag = $list->read_one();
+    if($flag) {
+        // create array
+        $list_arr = array(
+            "list_id" => $list->list_id,
+            "name" => $list->name,
+            "updated_on" => $list->updated_on,
+            "pending_tasks" => $list->pending_tasks
+        );
+        // make it json format
+        print_r(json_encode($list_arr));
+    }else{
+        echo json_encode(
+            array("message" => "No to_do lists found.")
+        );
+    }
 }else {
     // read all the lists
     $stmt = $list->read();
@@ -48,15 +53,13 @@ if($list->list_id>=0) {
 
         // retrieve our table contents\
         while ($row = $stmt->fetch_assoc()){
-            // extract rows
-            // this will make $row['name'] to
-            // just $name only
+            // extract rows...this will make $row['name'] to $name only
             extract($row);
             $list_item = array(
-                "list_id" =>  $row['list_id'],
-                "name" => $row['name'],
-                "updated_on" => $row['updated_on'],
-                "pending_tasks" => $row['pending_tasks']
+                "list_id" =>  $list_id,
+                "name" => $name,
+                "updated_on" => $updated_on,
+                "pending_tasks" => $pending_tasks
             );
             array_push($list_arr["records"], $list_item);
         }

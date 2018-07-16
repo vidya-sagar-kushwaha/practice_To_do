@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="82225fae-5a82-4ff1-bd25-b730afdceaaa" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="82225fae-5a82-4ff1-bd25-b730afdceaaa" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -165,20 +163,6 @@
           <expand>
             <path>
               <item name="practice_To_do" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice_To_do" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice_To_do" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice_To_do" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice_To_do" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice_To_do" type="462c0819:PsiDirectoryNode" />
-              <item name="CRUD" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice_To_do" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
           </expand>
@@ -216,16 +200,15 @@
       <updated>1531578026676</updated>
       <workItem from="1531578028159" duration="4023000" />
       <workItem from="1531593770553" duration="237000" />
-      <workItem from="1531594012992" duration="31542000" />
+      <workItem from="1531594012992" duration="31783000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35802000" />
+    <option name="totallyTimeSpent" value="36043000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="821" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17811158" />
       <window_info anchor="bottom" id="TODO" order="6" />
