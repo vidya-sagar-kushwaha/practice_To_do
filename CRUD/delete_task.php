@@ -23,6 +23,7 @@ $data = json_decode(file_get_contents("php://input"));
 
 $task = new Tasks($db);
 // set task id to be deleted
+$task->user_id = $data->user_id;
 $task->list_id = $data->list_id;
 $task->task_id = $data->task_id;
 

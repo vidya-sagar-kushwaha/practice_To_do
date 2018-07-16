@@ -20,12 +20,13 @@ $db = $conn->get_connection();
 $task = new Tasks($db);
 
 // set task id to be read. -1 indicates that value has not been supplied
+$task->user_id = isset($_GET['user_id']) ? $_GET['user_id'] : -1;
 $task->list_id = isset($_GET['list_id']) ? $_GET['list_id'] : -1;
 $task->task_id = isset($_GET['task_id']) ? $_GET['task_id'] : -1;
 
 // query task
-if($task->list_id>=0 && $task->task_id>=0) {
-    // list_id and task_id given as input.
+if($task->user_id >=0 && $task->list_id>=0 && $task->task_id>=0) {
+    // user_id, list_id and task_id given as input.
     $flag = $task->read_one();
 
     // 'flag' is TRUE if we got 1 row as query result
@@ -34,6 +35,7 @@ if($task->list_id>=0 && $task->task_id>=0) {
         $task_arr = array(
             "task_id" => $task->task_id,
             "list_id" => $task->list_id,
+            "user_id" => $task->user_id,
             "name" => $task->name,
             "updated_on" => $task->updated_on,
             "status" => $task->status
@@ -46,7 +48,7 @@ if($task->list_id>=0 && $task->task_id>=0) {
         );
     }
 }else {
-    // Show all tasks, order by list_id
+    // Show all tasks, order by list_id,user_id
     $stmt = $task->read();
     $num = $stmt->num_rows;
     // check if more than 0 record found
@@ -64,6 +66,7 @@ if($task->list_id>=0 && $task->task_id>=0) {
             $task_item = array(
                 "task_id" =>  $row['task_id'],
                 "list_id" =>  $row['list_id'],
+                "user_id" =>  $row['user_id'],
                 "name" => $row['name'],
                 "updated_on" => $row['updated_on'],
                 "status" => $row['status']

@@ -23,6 +23,7 @@ $task = new Tasks($db);
 $data = json_decode(file_get_contents("php://input"));
 
 // set task_id of task to be updated
+$task->user_id = $data->user_id;
 $task->list_id = $data->list_id;
 $task->task_id = $data->task_id;
 

@@ -11,6 +11,7 @@ class Tasks{
     // fields in 'tasks' table
     public $task_id;
     public $list_id;
+    public $user_id;
     public $name;
     public $updated_on;
     public $status;
@@ -21,13 +22,14 @@ class Tasks{
     }
 
     function read(){
-        $sql = "select * from ".$this->task_table." order by list_id ;";
+        $sql = "select * from ".$this->task_table." order by list_id,user_id ;";
         $result = $this->db->query($sql);
         return $result;
     }
 
     function read_one(){
-        $sql = "select * from ".$this->task_table." where list_id = ".$this->list_id." and task_id = ".$this->task_id;
+        $sql = "select * from ".$this->task_table." where user_id = ".$this->user_id." and list_id = ".$this->list_id." 
+                and task_id = ".$this->task_id;
         $result = $this->db->query($sql);
         $row = $result->fetch_assoc();
 
@@ -40,11 +42,11 @@ class Tasks{
     }
 
     function create(){
-        $sql = "insert into ".$this->task_table."(list_id, name, status) values(".$this->list_id.",\"".$this->name."\",\"".$this->status."\");";
+        $sql = "insert into ".$this->task_table."(list_id,user_id, name, status) values(".$this->list_id.",".$this->user_id.",\"".$this->name."\",\"".$this->status."\")";
         $result = $this->db->query($sql);
         if($result){
             // increment the number of tasks for the list this task belongs
-            $sql = "update ".$this->list_table." set pending_tasks = pending_tasks + 1 where list_id = ".$this->list_id;
+            $sql = "update ".$this->list_table." set pending_tasks = pending_tasks + 1 where user_id = ".$this->user_id." and list_id = ".$this->list_id;
             $this->db->query($sql);
             return true;
         }else
@@ -52,7 +54,9 @@ class Tasks{
     }
 
     function update(){
-        $sql = "update ".$this->task_table." set name = \"".$this->name."\", status = \"".$this->status."\", updated_on = Now() where list_id = ".$this->list_id." and task_id = ".$this->task_id;
+        $sql = "update ".$this->task_table." set name = \"".$this->name."\", status = \"".$this->status."\", updated_on = Now() where user_id = ".$this->user_id." 
+               and list_id = ".$this->list_id." and task_id = ".$this->task_id;
+        echo $sql;
         $result = $this->db->query($sql);
         if($result){
             return true;
@@ -65,7 +69,7 @@ class Tasks{
         $result = $this->db->query($sql);
         if($result){
             // decrement the number of tasks for the list to which this task belonged
-            $sql = "update ".$this->list_table." set pending_tasks = pending_tasks - 1 where list_id = ".$this->list_id." and pending_tasks > 0";
+            $sql = "update ".$this->list_table." set pending_tasks = pending_tasks - 1 where user_id = ".$this->user_id." and list_id = ".$this->list_id." and pending_tasks > 0";
             $this->db->query($sql);
             return true;
         }else
