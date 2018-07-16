@@ -24,6 +24,7 @@ $data = json_decode(file_get_contents("php://input"));
 
 // set list_id of list to be updated
 $list->list_id = $data->list_id;
+$list->user_id = $data->user_id;
 
 // set list property values
 $list->name = $data->name;

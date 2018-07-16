@@ -24,6 +24,7 @@ $data = json_decode(file_get_contents("php://input"));
 $list = new To_Do_List($db);
 // set list id to be deleted
 $list->list_id = $data->list_id;
+$list->user_id = $data->user_id;
 
 // delete the list
 if($list->delete()){

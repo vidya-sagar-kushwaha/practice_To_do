@@ -22,14 +22,16 @@ $list = new To_Do_List($db);
 
 // set ID property of list to be read. -1 indicates that list_id not supplied
 $list->list_id = isset($_GET['list_id']) ? $_GET['list_id'] : -1;
+$list->user_id = isset($_GET['user_id']) ? $_GET['user_id'] : -1;
 
 // query list
-if($list->list_id>=0) {
+if($list->list_id>=0 && $list->user_id>=0) {
     $flag = $list->read_one();
     if($flag) {
         // create array
         $list_arr = array(
             "list_id" => $list->list_id,
+            "user_id" => $list->user_id,
             "name" => $list->name,
             "updated_on" => $list->updated_on,
             "pending_tasks" => $list->pending_tasks
@@ -57,6 +59,7 @@ if($list->list_id>=0) {
             extract($row);
             $list_item = array(
                 "list_id" =>  $list_id,
+                "user_id" =>  $user_id,
                 "name" => $name,
                 "updated_on" => $updated_on,
                 "pending_tasks" => $pending_tasks

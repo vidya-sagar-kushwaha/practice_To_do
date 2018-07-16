@@ -9,6 +9,7 @@ class To_Do_List{
 
     // fields in 'to_do_lists' table
     public $list_id;
+    public $user_id;
     public $name;
     public $updated_on;
     public $pending_tasks;
@@ -26,13 +27,14 @@ class To_Do_List{
     }
 
     function read_one(){
-        $sql = "select * from ".$this->list_table." where list_id = ".$this->list_id;
+        $sql = "select * from ".$this->list_table." where user_id = ".$this->user_id." and list_id = ".$this->list_id;
         $result = $this->db->query($sql);
         $row = $result->fetch_assoc();
 
         // set values to object properties
 
         $this->list_id = $row['list_id'];
+        $this->user_id = $row['user_id'];
         $this->name = $row['name'];
         $this->updated_on = $row['updated_on'];
         $this->pending_tasks = $row['pending_tasks'];
@@ -42,7 +44,7 @@ class To_Do_List{
     }
 
     function create(){
-        $sql = "insert into ".$this->list_table."(name) values(\"".$this->name."\");";
+        $sql = "insert into ".$this->list_table."(name, user_id) values(\"".$this->name."\",".$this->user_id.")";
         $result = $this->db->query($sql);
         if($result){
             return true;
@@ -51,7 +53,8 @@ class To_Do_List{
     }
 
     function update(){
-        $sql = "update ".$this->list_table." set name = \"".$this->name."\", updated_on = Now() where list_id = ".$this->list_id;
+        $sql = "update ".$this->list_table." set name = \"".$this->name."\", updated_on = Now() where 
+                user_id = ".$this->user_id." and list_id = ".$this->list_id;
         echo $sql;
         $result = $this->db->query($sql);
         if($result){
@@ -61,7 +64,7 @@ class To_Do_List{
     }
 
     function delete(){
-        $sql = "delete from ".$this->list_table." where list_id=".$this->list_id;
+        $sql = "delete from ".$this->list_table." where user_id = ".$this->user_id." and list_id = ".$this->list_id;
         $result = $this->db->query($sql);
         if($result){
             return true;
