@@ -22,7 +22,7 @@ $list = new To_Do_List($db);
 // get id of product to be edited
 $data = json_decode(file_get_contents("php://input"));
 
-// set ID property of list to be edited
+// set list_id of list to be updated
 $list->list_id = $data->list_id;
 
 // set list property values

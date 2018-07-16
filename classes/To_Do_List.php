@@ -4,7 +4,7 @@ class To_Do_List{
 
     private $db;
     private $list_table = "to_do_lists";
-    private $task_table = "tasks";
+    //private $task_table = "tasks";
 
 
     // fields in 'to_do_lists' table

@@ -27,4 +27,19 @@ $create_table_task = CREATE TABLE `to_do_lists` (
   PRIMARY KEY (`list_id`)
 );
 
+/*
+Further:
+1. add Users table
+    - user_id
+    - name
+
+2. add OWNS table (relation between user->list)
+    - user id
+    - list id
+3. has_task table (list->task relation)
+*/
+
+
+
+
 

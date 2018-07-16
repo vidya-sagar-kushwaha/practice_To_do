@@ -21,9 +21,8 @@ $db = $conn->get_connection();
 // get posted data
 $data = json_decode(file_get_contents("php://input"));
 
+//create and populate the object. It will be used in sql query
 $task = new Tasks($db);
-
-//populate the object
 $task->list_id = $data->list_id;
 $task->name = $data->name;
 $task->status = $data->status;

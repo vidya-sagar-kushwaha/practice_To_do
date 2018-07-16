@@ -22,7 +22,7 @@ $task = new Tasks($db);
 // get id of product to be edited
 $data = json_decode(file_get_contents("php://input"));
 
-// set ID property of list to be edited
+// set task_id of task to be updated
 $task->list_id = $data->list_id;
 $task->task_id = $data->task_id;
 

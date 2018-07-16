@@ -3,11 +3,12 @@
 class Tasks{
 
     private $db;
+    // table names
     private $list_table = "to_do_lists";
     private $task_table = "tasks";
 
 
-    // fields in 'to_do_lists' table
+    // fields in 'tasks' table
     public $task_id;
     public $list_id;
     public $name;
@@ -42,6 +43,7 @@ class Tasks{
         $sql = "insert into ".$this->task_table."(list_id, name, status) values(".$this->list_id.",\"".$this->name."\",\"".$this->status."\");";
         $result = $this->db->query($sql);
         if($result){
+            // increment the number of tasks for the list this task belongs
             $sql = "update ".$this->list_table." set pending_tasks = pending_tasks + 1 where list_id = ".$this->list_id;
             $this->db->query($sql);
             return true;
@@ -62,6 +64,7 @@ class Tasks{
         $sql = "delete from ".$this->task_table." where list_id=".$this->list_id." and task_id=".$this->task_id.";";
         $result = $this->db->query($sql);
         if($result){
+            // decrement the number of tasks for the list to which this task belonged
             $sql = "update ".$this->list_table." set pending_tasks = pending_tasks - 1 where list_id = ".$this->list_id." and pending_tasks > 0";
             $this->db->query($sql);
             return true;

@@ -25,9 +25,10 @@ $task->task_id = isset($_GET['task_id']) ? $_GET['task_id'] : -1;
 
 // query task
 if($task->list_id>=0 && $task->task_id>=0) {
-    // list_id and task_id given.
+    // list_id and task_id given as input.
     $flag = $task->read_one();
 
+    // 'flag' is TRUE if we got 1 row as query result
     if($flag) {
         // create array
         $task_arr = array(
