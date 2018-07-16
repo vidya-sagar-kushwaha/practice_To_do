@@ -19,7 +19,7 @@ $create_table_task = "CREATE TABLE `tasks` (
 )";
 
 
-$create_table_task = CREATE TABLE `to_do_lists` (
+$create_table_list = CREATE TABLE `to_do_lists` (
 `list_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   `updated_on` datetime DEFAULT CURRENT_TIMESTAMP,
