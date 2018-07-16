@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82225fae-5a82-4ff1-bd25-b730afdceaaa" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/CRUD/create_task.php" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/create_task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD/task_read_one.php" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/task_read_one.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD/update_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/update_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRUD/update_task.php" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/update_task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/Tasks.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Tasks.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/improvements_and_sql_queries.php" beforeDir="false" afterPath="$PROJECT_DIR$/improvements_and_sql_queries.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,11 +31,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create_task.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CRUD/create_task.php">
+      <file leaf-file-name="To_Do_List.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/To_Do_List.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+            <state relative-caret-position="90">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="165">
+                <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -78,20 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update_task.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="update_task.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CRUD/update_task.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="301">
               <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="improvements_and_sql_queries.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/improvements_and_sql_queries.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="27" column="2" lean-forward="true" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -129,7 +127,6 @@
         <option value="$PROJECT_DIR$/CRUD/create.php" />
         <option value="$PROJECT_DIR$/classes/To_Do_LIst.php" />
         <option value="$PROJECT_DIR$/CRUD/read_one.php" />
-        <option value="$PROJECT_DIR$/classes/To_Do_List.php" />
         <option value="$PROJECT_DIR$/CRUD/read.php" />
         <option value="$PROJECT_DIR$/CRUD/create_list.php" />
         <option value="$PROJECT_DIR$/CRUD/delete_list.php" />
@@ -141,6 +138,8 @@
         <option value="$PROJECT_DIR$/CRUD/task_read_one.php" />
         <option value="$PROJECT_DIR$/CRUD/update_list.php" />
         <option value="$PROJECT_DIR$/CRUD/update_task.php" />
+        <option value="$PROJECT_DIR$/classes/To_Do_List.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -220,12 +219,12 @@
       <updated>1531578026676</updated>
       <workItem from="1531578028159" duration="4023000" />
       <workItem from="1531593770553" duration="237000" />
-      <workItem from="1531594012992" duration="30586000" />
+      <workItem from="1531594012992" duration="31107000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34846000" />
+    <option name="totallyTimeSpent" value="35367000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="821" extended-state="6" />
@@ -319,24 +318,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/To_Do_List.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/improvements_and_sql_queries.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="27" column="2" lean-forward="true" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CRUD/create_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-end-line="24" />
         </state>
       </provider>
     </entry>
@@ -399,6 +384,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRUD/create_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/To_Do_List.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="165">
+            <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
