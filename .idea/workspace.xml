@@ -44,22 +44,19 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="165">
-                <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <first_editor relative-caret-position="620">
+                <caret line="84" column="6" lean-forward="true" selection-start-line="84" selection-start-column="6" selection-end-line="84" selection-end-column="6" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="delete_list.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CRUD/delete_list.php">
+      <file leaf-file-name="improvements_and_sql_queries.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/improvements_and_sql_queries.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-              <folding>
-                <element signature="e#6#32#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="330">
+              <caret line="27" column="2" lean-forward="true" selection-start-line="9" selection-end-line="27" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -219,18 +216,18 @@
       <updated>1531578026676</updated>
       <workItem from="1531578028159" duration="4023000" />
       <workItem from="1531593770553" duration="237000" />
-      <workItem from="1531594012992" duration="31107000" />
+      <workItem from="1531594012992" duration="31542000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35367000" />
+    <option name="totallyTimeSpent" value="35802000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="821" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3040057" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17811158" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -318,13 +315,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/improvements_and_sql_queries.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="27" column="2" lean-forward="true" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CRUD/create_task.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -401,11 +391,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/improvements_and_sql_queries.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="27" column="2" lean-forward="true" selection-start-line="9" selection-end-line="27" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="165">
-            <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <first_editor relative-caret-position="620">
+            <caret line="84" column="6" lean-forward="true" selection-start-line="84" selection-start-column="6" selection-end-line="84" selection-end-column="6" />
           </first_editor>
           <second_editor />
         </state>
