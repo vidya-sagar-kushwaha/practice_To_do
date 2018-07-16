@@ -55,8 +55,6 @@ if($task->user_id >=0 && $task->list_id>=0 && $task->task_id>=0) {
     if($num>0){
         // To_Do array
         $task_arr=array();
-        $task_arr["records"]=array();
-
         // retrieve our table contents\
         while ($row = $stmt->fetch_assoc()){
             // extract rows
@@ -71,7 +69,7 @@ if($task->user_id >=0 && $task->list_id>=0 && $task->task_id>=0) {
                 "updated_on" => $row['updated_on'],
                 "status" => $row['status']
             );
-            array_push($task_arr["records"], $task_item);
+            array_push($task_arr, $task_item);
         }
         print_r(json_encode($task_arr));
     }

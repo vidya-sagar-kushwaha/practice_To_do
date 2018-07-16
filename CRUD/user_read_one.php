@@ -47,7 +47,6 @@ if($user->user_id>=0) {
     if($num>0){
         // To_Do array
         $user_arr=array();
-        $user_arr["records"]=array();
 
         // retrieve our table contents\
         while ($row = $stmt->fetch_assoc()){
@@ -57,7 +56,7 @@ if($user->user_id>=0) {
                 "user_id" =>  $user_id,
                 "name" => $name
             );
-            array_push($user_arr["records"], $user_item);
+            array_push($user_arr, $user_item);
         }
         print_r(json_encode($user_arr));
     }
